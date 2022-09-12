@@ -1,13 +1,24 @@
-// Import packages
 const express = require("express");
-const home = require("./routes/home");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const mongoose = require("mongoose");
 
-// Middlewares
 const app = express();
-app.use(express.json());
+
+app.set('view engine', 'ejs');
+
+
+
+
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 
 // Routes
-app.use("/home", home);
+app.get("/" , function(req, res){
+res.send("it is working");
+});
+
 
 // connection
 const port = process.env.PORT || 9001;

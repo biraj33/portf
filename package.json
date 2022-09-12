@@ -14,7 +14,10 @@
   "author": "biraj",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
     "express": "^4.17.3",
+    "mongoose": "^6.6.0",
     "nodemon": "^2.0.15"
   }
 }
