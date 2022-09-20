@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 
 const app = express();
-
+const home = require("./routes/home");
 app.set('view engine', 'ejs');
 
 
@@ -14,11 +14,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// Routes
-app.get("/" , function(req, res){
-res.send("it is working");
-});
+mongoose.connect("mongodb+srv://admin_biraj:Test123@atlascluster.skvmtce.mongodb.net/teacherDB", {useNewUrlParser:true});
 
+
+
+
+// Routes
+app.use("/", home);
 
 // connection
 const port = process.env.PORT || 9001;
