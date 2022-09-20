@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin_biraj:Test123@atlascluster.skvmtce.mongodb.net/teacherDB", {useNewUrlParser:true});
+// mongoose.connect("mongodb+srv://admin_biraj:Test123@atlascluster.skvmtce.mongodb.net/teacherDB", {useNewUrlParser:true});
 
 
 
