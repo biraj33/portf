@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 
 const app = express();
-const home = require("./routes/home");
+const home = require(__dirname + "./routes/home");
 app.set('view engine', 'ejs');
 
 
